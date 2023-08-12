@@ -7,6 +7,15 @@ require_once('../includes/functions.php');
 ?>
 
 <head>
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward()
+        };
+        setTimeout("preventBack()", 0);
+        window.onunload = function() {
+            null;
+        }
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,10 +41,8 @@ require_once('../includes/functions.php');
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="dashboard.php"><img src="../images/saru logo.png"
-                        class="mr-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="dashboard.php"><img src="../images/saru logo.png"
-                        alt="logo" /></a>
+                <a class="navbar-brand brand-logo mr-5" href="dashboard.php"><img src="../images/saru logo.png" class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="dashboard.php"><img src="../images/saru logo.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -49,20 +56,17 @@ require_once('../includes/functions.php');
                                     <i class="icon-search"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
-                                aria-label="search" aria-describedby="search">
+                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
                         </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
-                            data-toggle="dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                             <i class="icon-bell mx-0"></i>
                             <span class="count"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                            aria-labelledby="notificationDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
                             <a class="dropdown-item preview-item">
                                 <div class="preview-thumbnail">
@@ -109,8 +113,7 @@ require_once('../includes/functions.php');
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="../images/faces/face28.jpg" alt="profile" />
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                            aria-labelledby="profileDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a href="user-profile.php" class="dropdown-item">
                                 <i class="ti-user text-primary"></i>
                                 Profile
@@ -119,15 +122,14 @@ require_once('../includes/functions.php');
                                 <i class="ti-settings text-primary"></i>
                                 Settings
                             </a>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" href="../index.php">
                                 <i class="ti-power-off text-primary"></i>
                                 Logout
                             </a>
                         </div>
                     </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                    data-toggle="offcanvas">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                     <span class="icon-menu"></span>
                 </button>
             </div>
@@ -170,8 +172,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#people" aria-expanded="false"
-                            aria-controls="people">
+                        <a class="nav-link" data-toggle="collapse" href="#people" aria-expanded="false" aria-controls="people">
                             <i class="icon-head menu-icon"></i>
                             <span class="menu-title">People</span>
                             <i class="menu-arrow"></i>
@@ -189,8 +190,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#raw-materials" aria-expanded="false"
-                            aria-controls="raw-materials">
+                        <a class="nav-link" data-toggle="collapse" href="#raw-materials" aria-expanded="false" aria-controls="raw-materials">
                             <i class="icon-pie-graph menu-icon"></i>
                             <span class="menu-title">Raw Materials</span>
                             <i class="menu-arrow"></i>
@@ -204,8 +204,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false"
-                            aria-controls="products">
+                        <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="products">
                             <i class="icon-bar-graph-2 menu-icon"></i>
                             <span class="menu-title">Products</span>
                             <i class="menu-arrow"></i>
@@ -223,8 +222,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#sales" aria-expanded="false"
-                            aria-controls="sales">
+                        <a class="nav-link" data-toggle="collapse" href="#sales" aria-expanded="false" aria-controls="sales">
                             <i class="icon-star menu-icon"></i>
                             <span class="menu-title">Sales</span>
                             <i class="menu-arrow"></i>
@@ -239,8 +237,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#purchase" aria-expanded="false"
-                            aria-controls="purchase">
+                        <a class="nav-link" data-toggle="collapse" href="#purchase" aria-expanded="false" aria-controls="purchase">
                             <i class="icon-reload menu-icon"></i>
                             <span class="menu-title">Orders</span>
                             <i class="menu-arrow"></i>
@@ -262,8 +259,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#transfer" aria-expanded="false"
-                            aria-controls="transfer">
+                        <a class="nav-link" data-toggle="collapse" href="#transfer" aria-expanded="false" aria-controls="transfer">
                             <i class="icon-fast-forward menu-icon"></i>
                             <span class="menu-title">Transfers</span>
                             <i class="menu-arrow"></i>
@@ -281,8 +277,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#return" aria-expanded="false"
-                            aria-controls="return">
+                        <a class="nav-link" data-toggle="collapse" href="#return" aria-expanded="false" aria-controls="return">
                             <i class="icon-reply menu-icon"></i>
                             <span class="menu-title">Returns</span>
                             <i class="menu-arrow"></i>
@@ -298,8 +293,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false"
-                            aria-controls="report">
+                        <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Reports</span>
                             <i class="menu-arrow"></i>
@@ -320,8 +314,7 @@ require_once('../includes/functions.php');
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#accounts" aria-expanded="false"
-                            aria-controls="accounts">
+                        <a class="nav-link" data-toggle="collapse" href="#accounts" aria-expanded="false" aria-controls="accounts">
                             <i class="icon-stack-2 menu-icon"></i>
                             <span class="menu-title">Accounts</span>
                             <i class="menu-arrow"></i>

@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+   
+    <!-- prevent back keyword -->
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward()
+        };
+        setTimeout("preventBack()", 0);
+        window.onunload = function() {
+            null;
+        }
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -54,7 +66,7 @@
                     <div class="row">
                         <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h2 class="font-weight-bold text-center">Login</h2>
-                            <h6 class="font-weight-normal mb-0 text-center">Please enter your credentials to proceed.
+                            <h6 class="font-weight-normal mb-0 text-center" id="displayer">Please enter your credentials to proceed.
                             </h6>
                         </div>
                     </div>
@@ -65,8 +77,8 @@
                 <div class="col-md-6 offset-md-3 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <form class="forms-sample">
 
+                            <form class="forms-sample" action="./includes/login.php" method="post" autocomplete="off">
                                 <div class="form-group">
                                     <label for="type">Type</label>
                                     <select class="form-control" id="type" name="type">
@@ -87,7 +99,7 @@
 
                                 <button type="submit" class="btn btn-primary mr-2">Login</button>
                                 <button type="button" class="btn btn-light">Cancel</button>
-                                <a href="public/dashboard.php">Next</a>
+                                <!-- <a href="public/dashboard.php">Next</a> -->
                             </form>
                             <div class="mt-3 text-center">
                                 <a href="forgot-password.php">Forgot Password?</a>
@@ -99,6 +111,7 @@
         </div>
     </div>
     <!-- content-wrapper ends -->
+
 </body>
 
 </html>
