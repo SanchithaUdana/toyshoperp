@@ -1,5 +1,25 @@
 <?php include_once('header.php'); ?>
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+        });
 
+        Toast.fire({
+            icon: "success",
+            title: "Signed in successfully",
+        });
+    },  );
+</script> -->
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
@@ -9,8 +29,7 @@
                     <div class="col-12 col-xl-8">
                         <h2 class="font-weight-bold">Welcome to Saru ERP System!</h2>
                         <br>
-                        <h6 class="font-weight-normal mb-3">All systems are running smoothly! You have <span
-                                class="text-primary">3
+                        <h6 class="font-weight-normal mb-3">All systems are running smoothly! You have <span class="text-primary">3
                                 pending orders!</span></h6>
                     </div>
                 </div>

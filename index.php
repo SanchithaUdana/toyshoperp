@@ -2,9 +2,58 @@
 <html lang="en">
 
 <head>
-   
+    <!-- sweetalert 2 CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    </script>
+
+    <!-- form empty checker -->
+    <script defer>
+        function validateForm() {
+            var x = document.forms["logform"]["username"].value;
+            var y = document.forms["logform"]["password"].value;
+
+            if (x == "" && y == "") {
+                Swal.fire({
+                    icon: 'question',
+                    title: 'Enter Username and password',
+                    text: 'Empty Login Details',
+                    position: 'center',
+                    padding: '30px',
+                    allowEnterKey: true,
+                    allowOutsideClick: false,
+                    
+                })
+                return false;
+            } else if (x == "") {
+                Swal.fire({
+                    icon: 'question',
+                    title: 'Enter Username',
+                    text: 'Empty Login Details',
+                    position: 'center',
+                    padding: '30px',
+                    allowEnterKey: true,
+                    allowOutsideClick: false,
+                })
+                return false;
+            } else if (y == "") {
+                Swal.fire({
+                    icon: 'question',
+                    title: 'Enter password',
+                    text: 'Empty Login Details',
+                    position: 'center',
+                    padding: '30px',
+                    allowEnterKey: true,
+                    allowOutsideClick: false,
+                })
+                return false;
+            }
+
+
+        }
+    </script>
+
     <!-- prevent back keyword -->
-    <script type="text/javascript">
+    <script defer type="text/javascript">
         function preventBack() {
             window.history.forward()
         };
@@ -33,6 +82,10 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
     <style>
+        .swal2-container {
+            padding: 0.4em;
+        }
+
         body {
             display: flex;
             justify-content: center;
@@ -78,7 +131,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form class="forms-sample" action="./includes/login.php" method="post" autocomplete="off">
+                            <form class="forms-sample" name="logform" action="./includes/login.php" method="post" autocomplete="off">
                                 <div class="form-group">
                                     <label for="type">Type</label>
                                     <select class="form-control" id="type" name="type">
@@ -97,7 +150,7 @@
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary mr-2">Login</button>
+                                <button type="submit" onclick="return validateForm()" class="btn btn-primary mr-2">Login</button>
                                 <button type="button" class="btn btn-light">Cancel</button>
                                 <!-- <a href="public/dashboard.php">Next</a> -->
                             </form>
@@ -111,7 +164,7 @@
         </div>
     </div>
     <!-- content-wrapper ends -->
-
 </body>
+
 
 </html>
