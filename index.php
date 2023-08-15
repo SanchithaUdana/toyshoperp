@@ -46,9 +46,8 @@
                     allowOutsideClick: false,
                 })
                 return false;
-            }
-
-
+            } 
+            
         }
     </script>
 
@@ -165,7 +164,7 @@
     </div>
     <!-- content-wrapper ends -->
 
-
+    <script src="./js/loginfailed.js"></script>
 
 </body>
 

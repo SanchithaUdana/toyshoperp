@@ -19,21 +19,7 @@ $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) == 1) {
     header("Location: http://localhost:8888/toyshoperp/public/dashboard.php");
 } else {
-    header("Location: http://localhost:8888/toyshoperp");
-?>
-    <script>
-        Swal.fire({
-            icon: 'question',
-            title: 'Enter Username and password',
-            text: 'Empty Login Details',
-            position: 'center',
-            padding: '30px',
-            allowEnterKey: true,
-            allowOutsideClick: false,
-
-        })
-    </script>
-<?php
+    header("Location: http://localhost:8888/toyshoperp?error=1");
 }
 
 mysqli_close($con);
