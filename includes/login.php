@@ -17,9 +17,10 @@ $query = "SELECT * FROM users WHERE type='$type' AND username='$username' AND pa
 $result = mysqli_query($con, $query);
 
 if (mysqli_num_rows($result) == 1) {
-    header("Location: http://localhost:8888/toyshoperp/public/dashboard.php");
+    header("Location: http://localhost:8888/toyshoperp/public/dashboard.php?error=0");
+    exit();
 } else {
-    header("Location: http://localhost:8888/toyshoperp?error=1");
-}
+    header("Location: http://localhost:8888/toyshoperp");
+};
 
 mysqli_close($con);

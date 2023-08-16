@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+
+
     <!-- sweetalert 2 CDN -->
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     </script>
@@ -11,6 +13,14 @@
         function validateForm() {
             var x = document.forms["logform"]["username"].value;
             var y = document.forms["logform"]["password"].value;
+
+            // var currentURL = window.location.href;
+            // // Create a URL object from the current URL
+            // var url = new URL(currentURL);
+            // // Get the URLSearchParams object from the URL
+            // var searchParams = url.searchParams;
+            // // Get the value of the 'error' parameter
+            // var errorValue = searchParams.get("error");
 
             if (x == "" && y == "") {
                 Swal.fire({
@@ -46,8 +56,7 @@
                     allowOutsideClick: false,
                 })
                 return false;
-            } 
-            
+            }
         }
     </script>
 
@@ -164,7 +173,6 @@
     </div>
     <!-- content-wrapper ends -->
 
-    <script src="./js/loginfailed.js"></script>
 
 </body>
 
