@@ -162,9 +162,9 @@
                                 <!-- <button type="button" class="btn btn-light">Cancel</button> -->
                                 <!-- <a href="public/dashboard.php">Next</a> -->
                             </form>
-                            <div class="mt-3 text-center">
+                            <!-- <div class="mt-3 text-center">
                                 <a href="forgot-password.php">Forgot Password?</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
